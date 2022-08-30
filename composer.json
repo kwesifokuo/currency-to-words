@@ -1,0 +1,19 @@
+{
+    "name": "phrontlyne/modules",
+    "description": "A package with extensions or modules for Phrontlyne",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Phrontlyne\\Modules\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ernest Owusu Fokuo",
+            "email": "kwesifokuo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
