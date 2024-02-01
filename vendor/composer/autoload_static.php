@@ -7,21 +7,17 @@ namespace Composer\Autoload;
 class ComposerStaticInitfa948e299da5c910984c311a436c3fa1
 {
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'C' => 
         array (
-            'Phrontlyne\\CurrencyToWords\\' => 27,
+            'CurrencyToWords\\' => 16,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Phrontlyne\\CurrencyToWords\\' => 
+        'CurrencyToWords\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
-    );
-
-    public static $classMap = array (
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -29,7 +25,6 @@ class ComposerStaticInitfa948e299da5c910984c311a436c3fa1
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitfa948e299da5c910984c311a436c3fa1::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitfa948e299da5c910984c311a436c3fa1::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitfa948e299da5c910984c311a436c3fa1::$classMap;
 
         }, null, ClassLoader::class);
     }

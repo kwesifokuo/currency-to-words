@@ -1,35 +1,34 @@
 <?php
 
-namespace Phrontlyne\Modules;
+namespace CurrencyToWords;
 
 class CurrencyToWords
 {
-    public function format(String $amount, String $case = "upper", String $currency)
+    public function format(String $amount, String $lang = "en", String $word_currency, String $word_unit, String $case = "default")
     {
-        $word_currency = "Ghana Cedis";
-        $word_unit = "Pesewas";
-
-        if($currency == 'USD') {
-            $word_currency = "Dollars";
-            $word_unit = "Cents";
-        } elseif($currency == 'EUR') {
-            $word_currency = "Euros";
-            $word_unit = "Cents";
-        } elseif($currency == 'GBP') {
-            $word_currency = "Pounds";
-            $word_unit = "Pence";
-        }
-        $f = new \NumberFormatter("en", \NumberFormatter::SPELLOUT);
+        $f = new \NumberFormatter($lang, \NumberFormatter::SPELLOUT);
         $f->setTextAttribute(\NumberFormatter::DEFAULT_RULESET, "%spellout-numbering-verbose");
-        //$number = $suminsured;
-        $numberParts = explode('.', $amount); //(string)
+
+        $numberParts = explode('.', $amount);
         $amtInWords =  $f->format($numberParts[0]);
+
         if (isset($numberParts[1]) && $numberParts[1] != 00) {
             $amtInWords .= ' '.$word_currency.' ' . $f->format($numberParts[1]).' '.$word_unit;
         } else {
             $amtInWords .= ' '.$word_currency;
         }
-        $amtInWords = $case == 'upper' ? strtoupper($amtInWords) : ucwords($amtInWords);
+        switch ($case) {
+            case 'upper':
+                $amtInWords = strtoupper($amtInWords);
+                break;
+            case 'lower':
+                $amtInWords = strtolower($amtInWords);
+                break;
+            default:
+                $amtInWords = ucwords($amtInWords);
+                break;
+        }
+        
         return $amtInWords;
     }
 }

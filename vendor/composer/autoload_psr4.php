@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Phrontlyne\\CurrencyToWords\\' => array($baseDir . '/src'),
+    'CurrencyToWords\\' => array($baseDir . '/src'),
 );

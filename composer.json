@@ -1,11 +1,11 @@
 {
-    "name": "phrontlyne/modules",
-    "description": "A package with extensions or modules for Phrontlyne",
+    "name": "cibs/currency-to-words",
+    "description": "A PHP number to words Currency converter",
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Phrontlyne\\Modules\\": "src/"
+            "CurrencyToWords\\": "src/"
         }
     },
     "authors": [
