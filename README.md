@@ -5,6 +5,12 @@
 ## Create an Instance
 $currencyToWords = new \CurrencyToWords\CurrencyToWords();
 
+## or Use
+use CurrencyToWords\CurrencyToWords;
+
+$ctw = new CurrencyToWords();
+$amtInWords = $ctw->format(101000.56, 'en', 'Ghana Cedis', 'Pesewas');
+
 ### Parameters
 String $amount = 10000.56 (Required)
 String $lang = "en" (Required)
