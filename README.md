@@ -9,6 +9,7 @@ $currencyToWords = new \CurrencyToWords\CurrencyToWords();
 use CurrencyToWords\CurrencyToWords;
 
 $ctw = new CurrencyToWords();
+
 $amtInWords = $ctw->format(101000.56, 'en', 'Ghana Cedis', 'Pesewas');
 
 ### Parameters
