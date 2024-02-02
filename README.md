@@ -38,3 +38,6 @@ String $case = "default" (Optional)
 ### Example
 'en' = English, 'fr' = French, 'es' = Spanish, etc. \
 ``` $amtInWords = $currencyToWords->format(10000.56, 'fr', 'Euros', 'Cents', 'lower'); ```
+
+Here is a complete list of PHP locales: \
+https://github.com/umpirsky/locale-list/blob/master/data/rw/locales.php
