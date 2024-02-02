@@ -2,7 +2,12 @@
 
 # Usage
 
+## Install 
+``` composer install cibs/currency-to-words ```
+
 ## Create an Instance
+Then in your Controller or View, you can use it with an instance. \
+
 $currencyToWords = new \CurrencyToWords\CurrencyToWords();
 
 ## or Use
