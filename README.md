@@ -17,7 +17,7 @@ Then in your Controller or View, you can use it with an instance. \
 ``` $amtInWords = $ctw->format(101000.56, 'en', 'Ghana Cedis', 'Pesewas'); ```
 
 ### Parameters
-String $amount = 10000.56 (Required) \
+String $amount = "10000.56" (Required) \
 String $lang = "en" (Required) \
 String $word_currency = "United States Dollars" (Required) \
 String $word_unit = "Cents" (Required) \
