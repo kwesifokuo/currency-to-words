@@ -3,7 +3,7 @@
 # Usage
 
 ## Install 
-``` composer install cibs/currency-to-words ```
+``` composer require cibs/currency-to-words ```
 
 ## Create an Instance
 Then in your Controller or View, you can use it with an instance. \
